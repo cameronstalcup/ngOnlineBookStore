@@ -1,0 +1,15 @@
+<p>
+  book-search works!
+</p>
+
+<div>
+  <input #searchBox id="search-box" {keyup}="search(search-box.value)"/>
+
+  <ul class="searh-result">
+      <li *ngFor="let book of books$ | async ">
+        <a routerLink="/detail/{{}book.id}">
+          {{book.title}}
+          </a>
+          </li>
+          </ul>
+</div>
