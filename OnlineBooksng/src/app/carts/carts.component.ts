@@ -11,7 +11,6 @@ import { Book } from '../book';
 })
 export class CartsComponent implements OnInit {
 
-  Temp: [];
   Carts: Cart[];
 
   constructor(private cartService: CartService) { }
@@ -19,8 +18,13 @@ export class CartsComponent implements OnInit {
   ngOnInit() {
   }
 
-  addCart(): void{
-    this.cartService.addCart()
+  /*getCart():void{
+    this.cartService.getCart()
+    .subscribe(cart => this.Carts = cart)
+}*/
+
+  addToCart(): void{
+    this.cartService.addToCart()
       .subscribe(carts => this.Carts = carts)
   }
 

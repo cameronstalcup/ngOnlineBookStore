@@ -1,6 +1,6 @@
 import { Book } from "./book";
 
 export class Cart {
-    Cart: [];
+    Id: number;
     Books: Book[];
 }

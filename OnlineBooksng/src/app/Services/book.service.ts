@@ -9,7 +9,7 @@ import { Book } from '../book';
 })
 export class BookService {
 
-  url: string = "api/books";
+  url: string = "api/Books";
 
   books: Observable<BooksComponent>[];
 

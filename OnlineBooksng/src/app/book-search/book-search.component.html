@@ -3,13 +3,22 @@
 </p>
 
 <div>
-  <input #searchBox id="search-box" {keyup}="search(search-box.value)"/>
+  <h3>Search for a book</h3>
+  <input type="search" q="search-box" (keyup)="search(search-box.value)"/>
 
-  <ul class="searh-result">
+  <ul class="search-result">
       <li *ngFor="let book of books$ | async ">
-        <a routerLink="/detail/{{}book.id}">
-          {{book.title}}
-          </a>
-          </li>
-          </ul>
+          <a routerLink='/detail/{{book.id}}'>
+        {{book.title}}
+      </a>
+      </li>
+  </ul>
 </div>
+
+
+<!--
+   {keyup}="search(search-box.value)
+   {keyup}="search(search-box.value)"
+          <a routerLink='/detail/{{book.id}}'>
+          {{book.title}}
+        </a>-->
