@@ -5,17 +5,19 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
-import { OrdersComponent } from './orders/orders.component';
+import { CartsComponent } from './carts/carts.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksComponent,
-    OrdersComponent
+    CartsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+
    
   ],
   providers: [],
