@@ -4,8 +4,7 @@
 
 <div>
   <h3 style='background-color: cyan'>Search for a book</h3>
-  <input type="search" q="search-box" (keyup)="search(search-box.value)"/>
-
+  <input type="search" q="search-box" (keyup)="search(search-box.value)" placeholder="Search Books"/>
   <ul class="search-result" >
       <li *ngFor="let book of books$ | async ">
           <a routerLink='/detail/{{book.id}}'>
@@ -14,5 +13,7 @@
       </li>
   </ul>
 </div>
+
+
 
 
