@@ -4,6 +4,7 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { BooksComponent } from '../books/books.component';
 import { Book } from '../book';
+import { tap, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,6 +24,6 @@ export class BookService {
     if(!person.trim){
       return of([]);
     }
-    return this.client.get<Book[]>('${this.url}/?name=${person}');
+    return this.client.get<Book[]>('${this.url}/?name=${person}')
   }
 }
